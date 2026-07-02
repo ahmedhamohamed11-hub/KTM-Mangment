@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { useListCustomers, useCreateCustomer, getListCustomersQueryKey } from "@workspace/api-client-react";
+import { useListCustomers, useCreateCustomer, getListCustomersQueryKey } from "@/lib/api-client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";

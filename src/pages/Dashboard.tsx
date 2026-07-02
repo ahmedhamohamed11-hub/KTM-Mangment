@@ -1,4 +1,4 @@
-import { useGetDashboardStats, useGetRecentActivity, useGetUpcomingEvents } from "@workspace/api-client-react";
+import { useGetDashboardStats, useGetRecentActivity, useGetUpcomingEvents } from "@/lib/api-client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Users, Briefcase, FileText, ShoppingCart, Calendar as CalendarIcon, Euro, ArrowRight, Activity, Clock } from "lucide-react";

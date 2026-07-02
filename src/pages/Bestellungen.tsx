@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useListOrders, OrderStatus } from "@workspace/api-client-react";
+import { useListOrders, OrderStatus } from "@/lib/api-client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
