@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { useListCustomers, useCreateCustomer, getListCustomersQueryKey } from "@workspace/api-client-react";
+import { useListCustomers, useCreateCustomer, getListCustomersQueryKey } from "@/lib/api-client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SmartInput } from "@/components/ui/smart-input";
+import { SMART_TERM_CATEGORIES } from "@/hooks/use-smart-terms";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -92,7 +94,7 @@ export default function Kunden() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Vorname *</FormLabel>
-                        <FormControl><Input {...field} /></FormControl>
+                        <FormControl><SmartInput category={SMART_TERM_CATEGORIES.KUNDE_VORNAME} {...field} /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -103,7 +105,7 @@ export default function Kunden() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Nachname *</FormLabel>
-                        <FormControl><Input {...field} /></FormControl>
+                        <FormControl><SmartInput category={SMART_TERM_CATEGORIES.KUNDE_NACHNAME} {...field} /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -115,7 +117,7 @@ export default function Kunden() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Firma (Optional)</FormLabel>
-                      <FormControl><Input {...field} /></FormControl>
+                      <FormControl><SmartInput category={SMART_TERM_CATEGORIES.FIRMA} {...field} /></FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -151,7 +153,7 @@ export default function Kunden() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Straße</FormLabel>
-                        <FormControl><Input {...field} /></FormControl>
+                        <FormControl><SmartInput category={SMART_TERM_CATEGORIES.STRASSE} {...field} /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -186,7 +188,7 @@ export default function Kunden() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Stadt</FormLabel>
-                        <FormControl><Input {...field} /></FormControl>
+                        <FormControl><SmartInput category={SMART_TERM_CATEGORIES.STADT} {...field} /></FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
